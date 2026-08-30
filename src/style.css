@@ -27,7 +27,16 @@ body {
   overflow-x: hidden;
 }
 
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .page {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
   max-width: 480px;
   margin: 0 auto;
@@ -96,11 +105,15 @@ body {
   cursor: pointer;
   transition:
     background 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
     transform 0.15s ease;
 }
 
 .link-card:hover {
   background: var(--surface-hover);
+  border-color: rgba(124, 92, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(124, 92, 255, 0.15), 0 8px 24px -8px rgba(124, 92, 255, 0.35);
   transform: translateY(-1px);
 }
 
