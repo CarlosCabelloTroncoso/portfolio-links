@@ -7,6 +7,7 @@
   --text: #f2f2f4;
   --text-dim: #9a9aa5;
   --accent: #7c5cff;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
 * {
@@ -58,7 +59,7 @@ body {
 }
 
 .role {
-  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--accent);
   font-weight: 500;
@@ -131,6 +132,12 @@ body {
   font-size: 0.8rem;
   color: var(--text-dim);
   overflow-wrap: anywhere;
+}
+
+.stack-label {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .link-card-button {
