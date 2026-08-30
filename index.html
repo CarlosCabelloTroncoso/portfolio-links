@@ -7,14 +7,26 @@
     <meta name="description" content="Carlos Cabello - Software Developer. Portfolio, LinkedIn, GitHub y contacto." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/avatar.webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&display=swap"
+      />
+    </noscript>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
     <canvas id="bg-canvas" aria-hidden="true"></canvas>
     <main class="page">
       <section class="profile">
-        <img class="avatar" src="/avatar.webp" alt="Carlos Cabello" width="96" height="96" />
+        <img class="avatar" src="/avatar.webp" alt="Carlos Cabello" width="96" height="96" fetchpriority="high" />
         <h1 class="name">Carlos Cabello</h1>
         <p class="role">Software Developer</p>
         <p class="bio">
