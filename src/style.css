@@ -13,19 +13,25 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .page {
   min-height: 100vh;
   max-width: 480px;
   margin: 0 auto;
-  padding: 56px 20px 32px;
+  padding: clamp(32px, 10vh, 56px) max(20px, env(safe-area-inset-right)) max(32px, env(safe-area-inset-bottom))
+    max(20px, env(safe-area-inset-left));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,8 +43,8 @@ body {
 }
 
 .avatar {
-  width: 96px;
-  height: 96px;
+  width: clamp(80px, 22vw, 96px);
+  height: clamp(80px, 22vw, 96px);
   border-radius: 50%;
   object-fit: cover;
   margin: 0 0 16px;
@@ -46,7 +52,7 @@ body {
 }
 
 .name {
-  font-size: 1.75rem;
+  font-size: clamp(1.4rem, 6vw, 1.75rem);
   font-weight: 700;
   margin: 0 0 4px;
 }
@@ -60,7 +66,7 @@ body {
 }
 
 .bio {
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 3.6vw, 0.9rem);
   line-height: 1.5;
   color: var(--text-dim);
   margin: 0;
@@ -124,6 +130,7 @@ body {
 .link-sub {
   font-size: 0.8rem;
   color: var(--text-dim);
+  overflow-wrap: anywhere;
 }
 
 .link-card-button {
@@ -134,4 +141,20 @@ body {
   margin-top: 40px;
   font-size: 0.75rem;
   color: var(--text-dim);
+}
+
+@media (max-width: 340px) {
+  .link-card {
+    padding: 12px 14px;
+  }
+
+  .link-title {
+    font-size: 0.88rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .page {
+    padding-top: 80px;
+  }
 }
