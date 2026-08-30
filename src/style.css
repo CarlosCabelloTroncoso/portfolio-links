@@ -36,6 +36,15 @@ body {
   margin-bottom: 32px;
 }
 
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 0 16px;
+  border: 2px solid var(--border);
+}
+
 .name {
   font-size: 1.75rem;
   font-weight: 700;
