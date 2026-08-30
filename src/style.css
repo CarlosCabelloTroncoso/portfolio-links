@@ -52,9 +52,10 @@ body {
 }
 
 .role {
-  font-size: 0.95rem;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 0 12px;
 }
 
